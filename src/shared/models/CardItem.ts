@@ -1,11 +1,10 @@
 export class CardItem {
   constructor(
-    public cardName: string,
-    public writer: string,
-    public isComplete: boolean = false
+    public cardQuestion: string,
+    public cardAnswer: string,
   ) {
-    this.cardName = cardName;
-    this.isComplete = isComplete;
-    this.writer = writer;
+    this.cardQuestion = cardQuestion;
+    this.cardAnswer = cardAnswer;
+
   }
 }

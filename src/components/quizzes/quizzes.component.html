@@ -5,72 +5,31 @@
 <div class="card-app">
   <div class="input-container">
     <input type="text" name="new-card-name" placeholder="Add a new card" [(ngModel)]="newCardName">
-    <!-- Add a User to a Input-->
-    <div>
-      <div class="select-field-button">
-        <select required class="select-button"
-                [(ngModel)]="selectedUser"
-                (ngModelChange)="printSelectedUserData($event)">
-          <option value="" disabled selected>User</option>
-          <option *ngFor="let user of users" [value]="user.userID">
-            {{ user.userID }}
-          </option>
-        </select>
-      </div>
-    </div>
-    <!--Button to add the card into the cardes-->
+    <!--Button to add the card into the cards-->
     <button
       type="submit"
-      (click)="$event.preventDefault(); addNewcard()"
+      (click)="$event.preventDefault(); addNewCard()"
     >Add
     </button>
   </div>
 
-  <p>Select Options:</p>
-  <!-- Select Button to select only the unfulfilled, fulfilled or all cardes-->
-  <div class="select-container">
-    <div class="select-button-container">
-      <select class="select-button" [(ngModel)]="listFilter">
-        <option value="0">All</option>
-        <option value="1">Unchecked</option>
-        <option value="2">Checked</option>
-      </select>
-    </div>
-    <!-- Select Button to only select the carded, for different users-->
 
-    <div class="select-button-container">
-      <select required class="select-button"
-              [(ngModel)]="filterByUser"
-      >
-        <option value="0">All Users</option>
-        <option *ngFor="let user of users" [value]="user.userID">
-          {{ user.userID }}
-        </option>
-      </select>
-    </div>
-  </div>
 
   <!--If no cardes existing it should show the text: "There are no cardes to display-->
   <div class="container">
-    <div *ngIf="items.length == 0; else showItems" class="no-cardes">
+    <div *ngIf="items.length == 0; else showItems" class="no-cards">
       There are no cardes to display
     </div>
 
     <!--All Items should get listed here-->
     <ng-template #showItems>
-      <ul *ngIf="filteredItems.length != 0" class="card-list">
-        <li *ngFor="let item of filteredItems; index as ii" class="card-list-item">
+      <ul  class="card-list">
+        <li *ngFor="let item of items; index as ii" class="card-list-item">
           <div class="form-check">
             <label class="form-check-label">
-              <input
-                class="checkbox"
-                type="checkbox"
-                [checked]="item.isComplete"
-                [attr.data-index]="ii"
-                (click)="toggleItem(item)">
-              <span class="card-name">{{ item.cardName }}</span>
+              <span class="card-name">{{ item.cardQuestion }}</span>
               <span class="separator"></span>
-              <span class="writer">{{ item.writer }}</span>
+              <span class="writer">{{ item.cardAnswer }}</span>
             </label>
           </div>
         </li>

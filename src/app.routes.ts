@@ -1,7 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-
-import {User} from "./shared/models/User";
 import {QuizzesComponent} from './components/quizzes/quizzes.component';
 
 
