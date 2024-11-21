@@ -1,4 +1,4 @@
-export class CardItem {
+export class Card {
   constructor(
     public cardQuestion: string,
     public cardAnswer: string,

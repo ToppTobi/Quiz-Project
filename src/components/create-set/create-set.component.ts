@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import {NgClass} from '@angular/common';
+import {AppComponent} from '../app/app.component';
+
 
 @Component({
   selector: 'app-create-set',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    AppComponent
   ],
   templateUrl: 'create-set.component.html',
   styleUrls: ['create-set.component.css']
@@ -19,7 +22,7 @@ export class CreateSetComponent {
   }
 
   rotateCard() {
-    this.isRotated = !this.isRotated; // Schaltet zwischen true und false
-    console.log('Card rotated:', this.isRotated); // Debug-Ausgabe
+    this.isRotated = !this.isRotated;
+    console.log('Card rotated:', this.isRotated);
   }
 }

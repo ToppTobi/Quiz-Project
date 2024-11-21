@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterOutlet} from "@angular/router";
-import {CardItem} from '../../shared/models/CardItem';
+import {Card} from '../../shared/models/Card';
 
 
 @Component({
@@ -29,14 +29,14 @@ export class QuizzesComponent {
 
 
 
-  items: CardItem[] = [
-    new CardItem("Whats my Name", "Tobias"),
-    new CardItem("Whats my Last Name", "Topp"),
-    new CardItem("How old am i", "17"),
+  items: Card[] = [
+    new Card("Whats my Name", "Tobias"),
+    new Card("Whats my Last Name", "Topp"),
+    new Card("How old am i", "17"),
   ];
 
   addNewCard() {
-    this.items.push(new CardItem(this.newCardName, this.selectedUser));
+    this.items.push(new Card(this.newCardName, this.selectedUser));
     this.newCardName = "";
   }
 

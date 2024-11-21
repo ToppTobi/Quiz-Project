@@ -1,4 +1,26 @@
+<header>
+  <div class="nav-container">
+    <ul class="nav-list">
+      <div class="nav-cardsets">
+        <button class="nav-btn" [routerLink]="'/learnSets'">Learn Sets</button>
+
+      </div>
+      <div class="nav-friends">
+        <button class="nav-btn" [routerLink]="'/cards'">Friends</button>
+      </div>
+      <div class="nav-fight" [routerLink]="'/createSet'">
+        <button class="nav-btn">Fighting</button>
+      </div>
+      <div class="nav-character">
+        <button class="nav-btn">Character</button>
+      </div>
+    </ul>
+  </div>
+</header>
+
 <router-outlet></router-outlet>
+
+
 
 
 
