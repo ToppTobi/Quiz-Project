@@ -1,0 +1,39 @@
+html {
+  font-family: Inter, sans-serif;
+  color: #F0EBD8;
+  background-color: #1D2D44;
+}
+
+main {
+  padding: 0 15rem;
+}
+
+.first-container{
+  display: flex;
+  align-content: center;
+}
+
+.create-set-container {
+  position: relative;
+  display: flex;
+
+}
+.create-set-title {
+  position: relative;
+  width: auto;
+}
+
+.create-set-btn-container {
+  position: relative;
+  width: auto;
+  padding: 10px;
+  align-content: center;
+  margin-left: auto;
+}
+
+.create-button {
+padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
