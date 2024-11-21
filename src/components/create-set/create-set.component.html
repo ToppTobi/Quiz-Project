@@ -1,22 +1,35 @@
 <html>
-<body>
-<header>
+<header ngSkipHydration>
   <h2>PLACEHOLDER</h2>
 </header>
 <main>
   <div class="first-container">
     <div class="create-set-container">
       <div class="create-set-title">
-        <h1>Create a new set</h1>
+        <h1 (click)="$event.preventDefault(); isClicked()">Create a new set</h1>
       </div>
     </div>
-    <div class="create-set-btn-container">
-      <button class="create-button">
-        Create
-      </button>
-    </div>
+  </div>
+  <div class="create-set-btn-container">
+    <button class="create-button">
+      Create
+    </button>
+  </div>
+  <div>
+    <ul>
+      <li style="list-style-type: none">
+        <div class="card-container" (click)="$event.preventDefault(); rotateCard()">
+          <div class="card" [ngClass]="{'rotated': isRotated}">
+            <div class="front">
+              Erste Seite
+            </div>
+            <div class="back">
+              Zweite Seite
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </main>
-</body>
 </html>
-
