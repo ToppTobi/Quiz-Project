@@ -2,14 +2,16 @@
   <div class="nav-container">
     <ul class="nav-list">
       <div class="nav-cardsets">
-        <button class="nav-btn" [routerLink]="'/learnSets'">Learn Sets</button>
-
+        <button class="nav-btn" [routerLink]="'/learnSets'">
+          Learn Sets
+          <img ngSrc="assets/icons/cards-blank.svg" alt="Cards Icon" class="nav-icon-image" height="25" width="25">
+        </button>
       </div>
       <div class="nav-friends">
         <button class="nav-btn" [routerLink]="'/cards'">Friends</button>
       </div>
-      <div class="nav-fight" [routerLink]="'/createSet'">
-        <button class="nav-btn">Fighting</button>
+      <div class="nav-fight">
+        <button class="nav-btn" [routerLink]="'/createSet'">Fighting</button>
       </div>
       <div class="nav-character">
         <button class="nav-btn">Character</button>
@@ -19,10 +21,3 @@
 </header>
 
 <router-outlet></router-outlet>
-
-
-
-
-
-
-

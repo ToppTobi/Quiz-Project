@@ -30,6 +30,9 @@ header {
 }
 
 .nav-btn {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
   width: 80%;
   padding: 15px;
   font-size: 18px;
@@ -50,6 +53,12 @@ header {
 
 .nav-btn:hover {
   background-color: rgb(199, 198, 189);
+}
+
+.nav-icon-image {
+  display: flex;
+  height: 20px;
+  padding-left: 15px;
 }
 
 
