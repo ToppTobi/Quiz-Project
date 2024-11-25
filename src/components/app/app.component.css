@@ -57,10 +57,18 @@ header {
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover-Effekt */
 .nav-btn:hover::after {
   width: 50%;
   transform: translateX(-50%);
 }
+
+/* Aktiver Zustand */
+.nav-btn.active::after {
+  width: 50%;
+  transform: translateX(-50%);
+}
+
 
 
 

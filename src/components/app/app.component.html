@@ -1,12 +1,14 @@
 <header>
   <div class="nav-container">
     <ul class="nav-list">
-      <button class="nav-btn" [routerLink]="'/learnSets'">
-        Learn Sets
+      <button
+        class="nav-btn"
+        *ngFor="let route of navRoutes; let i = index"
+        [routerLink]="route.path"
+        [class.active]="selectedIndex == i"
+        (click)="setActive(i)">
+        {{ route.label }}
       </button>
-      <button class="nav-btn" [routerLink]="'/cards'">Friends</button>
-      <button class="nav-btn" [routerLink]="'/createSet'">Fighting</button>
-      <button class="nav-btn">Character</button>
     </ul>
   </div>
 </header>

@@ -25,4 +25,6 @@ export class CreateSetComponent {
     this.isRotated = !this.isRotated;
     console.log('Card rotated:', this.isRotated);
   }
+
+
 }
