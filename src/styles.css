@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'normal-text';
+  src: url('assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf');
+}
+
 html {
-  font-family: Inter, sans-serif;
+  font-family: normal-text, Bold, serif;
   color: #DAD7CD;
-  background-color: #344E41;
+  background-color: #FFFBEB;
 }
